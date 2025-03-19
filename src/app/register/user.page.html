@@ -1,0 +1,44 @@
+<ion-content [fullscreen]="true">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>User</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-item class="input-item">
+        <ion-input placeholder="Name" />
+      </ion-item>
+
+      <ion-item class="input-item">
+        <ion-input placeholder="Email" />
+      </ion-item>
+
+      <ion-item class="input-item">
+        <ion-input placeholder="Password" type="password" />
+      </ion-item>
+
+      <ion-grid class="buttons-container">
+        <ion-row>
+          <ion-col>
+            <ion-button expand="block" (click)="alertAction()" class="new-button">
+              New
+            </ion-button>
+          </ion-col>
+
+          <ion-col>
+            <ion-button expand="block" (click)="alertAction()" class="change-button">
+              Change
+            </ion-button>
+          </ion-col>
+
+          <ion-col>
+            <ion-button expand="block" (click)="alertAction()" class="save-button">
+              Save
+            </ion-button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card-content>
+
+  </ion-card>
+</ion-content>
