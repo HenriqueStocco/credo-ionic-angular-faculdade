@@ -8,27 +8,27 @@ const routes: Routes = [
     component: TabsPage,
     children: [
       {
-        path: 'login',
-        loadChildren: () => import('../login/login.module').then(m => m.LoginPageModule)
+        path: 'password',
+        loadChildren: () => import('../password/password.module').then(m => m.PasswordPageModule)
       },
       {
         path: 'user',
-        loadChildren: () => import('../register/user.module').then(m => m.UserPageModule)
+        loadChildren: () => import('../user/user.module').then(m => m.UserPageModule)
       },
-      {
-        path: 'tab3',
-        loadChildren: () => import('../tab3/tab3.module').then(m => m.Tab3PageModule)
-      },
+      // {
+      //   path: 'tab3',
+      //   loadChildren: () => import('../tab3/tab3.module').then(m => m.Tab3PageModule)
+      // },
       {
         path: '',
-        redirectTo: '/tabs/login',
+        redirectTo: '/tabs/password',
         pathMatch: 'full'
       }
     ]
   },
   {
     path: '',
-    redirectTo: '/tabs/login',
+    redirectTo: '/tabs/password',
     pathMatch: 'full'
   }
 ];

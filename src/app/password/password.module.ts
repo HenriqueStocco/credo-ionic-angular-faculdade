@@ -2,10 +2,10 @@ import { IonicModule } from '@ionic/angular';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { LoginPage } from './login.page';
+import { PasswordPage } from './password.page';
 import { ExploreContainerComponentModule } from '../explore-container/explore-container.module';
 
-import { LoginPageRoutingModule } from './login-routing.module';
+import { PasswordPageRoutingModule } from './password-routing.module';
 
 @NgModule({
   imports: [
@@ -13,8 +13,8 @@ import { LoginPageRoutingModule } from './login-routing.module';
     CommonModule,
     FormsModule,
     ExploreContainerComponentModule,
-    LoginPageRoutingModule
+    PasswordPageRoutingModule
   ],
-  declarations: [LoginPage]
+  declarations: [PasswordPage]
 })
-export class LoginPageModule { }
+export class PasswordPageModule { }

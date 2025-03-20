@@ -2,7 +2,7 @@ import { IonicModule } from '@ionic/angular';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { RegisterPage } from './user.page';
+import { UserPage } from './user.page';
 import { ExploreContainerComponentModule } from '../explore-container/explore-container.module';
 
 import { UserPageRoutingModule } from './user-routing.module';
@@ -15,6 +15,6 @@ import { UserPageRoutingModule } from './user-routing.module';
     ExploreContainerComponentModule,
     UserPageRoutingModule
   ],
-  declarations: [RegisterPage]
+  declarations: [UserPage]
 })
 export class UserPageModule { }
