@@ -1,0 +1,61 @@
+<section>
+  <div class="container">
+    <h1 class="title">Jo Ken Pô</h1>
+
+    <div class="game">
+      <div class="display">
+        <div class="show">
+          <div class="player-one">
+
+            <h4>Player 1</h4>
+
+            <div class="player-one-box">
+              <div [ngSwitch]="playerOne">
+                <div *ngSwitchCase="'rock'"><ion-icon name="diamond-outline" size="large"></ion-icon></div>
+                <div *ngSwitchCase="'paper'"> <ion-icon name="paper-plane-outline" size="large"></ion-icon></div>
+                <div *ngSwitchCase="'scissor'"><ion-icon name="cut-outline" size="large"></ion-icon></div>
+              </div>
+            </div>
+
+            <p style="font-weight: bold;">Points: {{ counterPlayerOne }}</p>
+          </div>
+
+          <div class="separator-vertical"></div>
+
+          <div class="player-two">
+
+            <h4>Player 2</h4>
+
+            <div class="player-two-box">
+              <div [ngSwitch]="playerChoiceTwo">
+                <div *ngSwitchCase="'rock'"><ion-icon name="diamond-outline" size="large"></ion-icon></div>
+                <div *ngSwitchCase="'paper'"> <ion-icon name="paper-plane-outline" size="large"></ion-icon></div>
+                <div *ngSwitchCase="'scissor'"><ion-icon name="cut-outline" size="large"></ion-icon></div>
+              </div>
+            </div>
+
+            <p style="font-weight: bold;">Points: {{ counterPlayerOne }}</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="buttons">
+        <button class="rock-button" id="rock" (click)="stoneButtonClicked()">
+          <ion-icon name="diamond-outline"></ion-icon>
+          Rock
+        </button>
+
+        <button class="paper-button" id="paper" (click)="paperButtonClicked()">
+          <ion-icon name="paper-plane-outline"></ion-icon>
+          Paper
+        </button>
+
+        <button class="scissor-button" id="scissor" (click)="scissorsButtonClicked()">
+          <ion-icon name="cut-outline"></ion-icon>
+          Scissor
+        </button>
+      </div>
+    </div>
+    <button class="start-button" (click)="startTheGame()">Start</button>
+  </div>
+</section>
