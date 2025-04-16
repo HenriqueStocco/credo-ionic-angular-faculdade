@@ -1,8 +1,14 @@
 <section>
   <div class="container">
-    <h1 class="title">Jo Ken Pô</h1>
+    <h1 class="title">Jo Ke<span>n Pô</span></h1>
+
+
 
     <div class="game">
+      <div class="round-label">
+        <p>Round: {{ gameRound }}</p>
+      </div>
+
       <div class="display">
         <div class="show">
           <div class="player-one">
@@ -34,7 +40,7 @@
               </div>
             </div>
 
-            <p style="font-weight: bold;">Points: {{ counterPlayerOne }}</p>
+            <p style="font-weight: bold;">Points: {{ counterPlayerTwo }}</p>
           </div>
         </div>
       </div>
@@ -56,6 +62,10 @@
         </button>
       </div>
     </div>
-    <button class="start-button" (click)="startTheGame()">Start</button>
+
+    <button [ngClass]="!gameState ? 'start-button' : 'end-button'" (click)="toogleGameState()">
+      {{ !gameState ? 'Start' : 'Stop'}}
+    </button>
+
   </div>
 </section>
